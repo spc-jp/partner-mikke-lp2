@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>共創パートナーみっけ｜AIデビューパック</title>
+<meta name="description" content="「AIなんて…」を「AIすごい！」に変える最初の3本。CASIO楽一販売店パートナー向けの新しいドアノック商材。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* 元のCSSをベースに構成 */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#223670;
+  --navy-dark:#1a2954;
+  --navy-light:#2d4490;
+  --gold:#D0A900;
+  --gold-light:#e8c947;
+  --gold-pale:#fff8e1;
+  --white:#ffffff;
+  --bg-light:#f7f8fc;
+  --bg-cream:#fdfbf3;
+  --text:#333333;
+  --text-light:#666666;
+  --border:#e5e7eb;
+  --color-pack1:#0e5c5f;
+  --color-pack1-pale:#e6f4f4;
+  --color-pack2:#7c2d3e;
+  --color-pack2-pale:#fbeef0;
+  --color-pack3:#1e4d8b;
+  --color-pack3-pale:#eaf0f9;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;background:var(--white);font-size:16px;}
+.serif{font-family:'Noto Serif JP',serif}
+
+.header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:1000;padding:12px 20px;border-bottom:1px solid var(--border);}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--navy);text-decoration:none;}
+.logo-mark{color:var(--gold)}
+.header-cta{background:var(--gold);color:var(--white);padding:8px 18px;border-radius:25px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.3s;}
+.header-cta:hover{background:var(--gold-light)}
+
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:var(--white);padding:120px 20px 80px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 30%,rgba(208,169,0,0.15) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(208,169,0,0.1) 0%,transparent 50%);}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;text-align:center;}
+.hero-badge{display:inline-block;background:rgba(208,169,0,0.2);border:1px solid var(--gold);color:var(--gold-light);padding:6px 18px;border-radius:20px;font-size:13px;font-weight:500;margin-bottom:30px;}
+.hero h1{font-size:42px;font-weight:700;line-height:1.5;margin-bottom:30px;letter-spacing:0.02em;}
+.hero h1 .accent{color:var(--gold-light)}
+.hero-sub{font-size:18px;line-height:1.9;margin-bottom:40px;color:rgba(255,255,255,0.9);max-width:800px;margin-left:auto;margin-right:auto;}
+.hero-trust{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-bottom:40px;font-size:14px;color:rgba(255,255,255,0.8);}
+.hero-trust-item{display:flex;align-items:center;gap:6px}
+.hero-trust-item::before{content:'✓';color:var(--gold-light);font-weight:700;}
+.hero-cta-group{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--white);padding:18px 40px;border-radius:50px;font-size:17px;font-weight:700;text-decoration:none;transition:all 0.3s;box-shadow:0 8px 24px rgba(208,169,0,0.4);}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 32px rgba(208,169,0,0.5);}
+
+.section{padding:90px 20px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-title{font-family:'Noto Serif JP',serif;font-size:36px;font-weight:700;text-align:center;color:var(--navy);margin-bottom:20px;line-height:1.4;}
+.section-line{width:60px;height:3px;background:var(--gold);margin:0 auto 25px;}
+.section-sub{text-align:center;font-size:17px;color:var(--text-light);margin-bottom:60px;line-height:1.8;}
+
+/* 新コンセプトセクション用 */
+.concept{background:var(--bg-cream)}
+.reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px;}
+.reason-card{background:var(--white);padding:40px 30px;border-radius:12px;border-top:4px solid var(--gold);box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;}
+.reason-icon{font-size:48px;margin-bottom:20px}
+.reason-card h3{font-size:19px;color:var(--navy);margin-bottom:15px;line-height:1.5;}
+.reason-card p{font-size:14px;color:var(--text-light);line-height:1.8;text-align:left;}
+
+.packages{background:var(--bg-light)}
+.pack-card{background:var(--white);border-radius:16px;padding:50px 45px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin-bottom:30px;display:grid;grid-template-columns:300px 1fr;gap:45px;align-items:start;border-top:6px solid var(--gold);}
+.pack-left{position:sticky;top:80px}
+.door-knock-badge{display:inline-block;background:#e63946;color:white;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:bold;margin-bottom:15px;animation:pulse 2s infinite;box-shadow:0 4px 10px rgba(230,57,70,0.3);}
+@keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
+.pack-icon-large{font-size:56px;margin-bottom:16px}
+.pack-title{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;margin-bottom:8px;line-height:1.4;color:var(--navy);}
+.pack-tagline{font-size:14px;color:var(--text-light);margin-bottom:25px;line-height:1.7;}
+.pack-target-box{background:var(--gold-pale);padding:20px;border-radius:10px;margin-bottom:20px;font-size:13px;line-height:1.8;color:var(--text);border:1px solid rgba(208,169,0,0.3);}
+.pack-target-box strong{display:block;font-size:13px;margin-bottom:6px;color:var(--navy);}
+.pack-price-box{background:var(--bg-light);padding:20px;border-radius:10px;text-align:center;}
+.pack-price-label{font-size:12px;color:var(--text-light);margin-bottom:6px}
+.pack-price-value{font-family:'Noto Serif JP',serif;font-size:30px;font-weight:700;color:var(--navy);}
+.pack-price-value .yen{font-size:20px}
+.pack-price-value .month{font-size:14px;color:var(--text-light);font-weight:500}
+.pack-margin-tag{display:inline-block;margin-top:8px;background:var(--gold);color:var(--white);padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;}
+
+.pack-right h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:18px;padding-left:14px;border-left:4px solid var(--gold);}
+.app-list{display:grid;gap:18px}
+.app-card{background:var(--bg-cream);border-radius:10px;padding:25px;display:grid;grid-template-columns:60px 1fr;gap:20px;align-items:start;}
+.app-emoji{font-size:36px;text-align:center}
+.app-name{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.app-desc{font-size:14px;color:var(--text-light);line-height:1.8;margin-bottom:12px;}
+.app-output{font-size:13px;color:var(--text);background:var(--white);padding:10px 15px;border-radius:6px;border-left:3px solid var(--gold);line-height:1.7;}
+.app-output strong{color:var(--gold);font-size:11px;display:block;margin-bottom:2px;}
+
+/* アップセルセクション */
+.upsell-section{background:var(--white);padding:70px 20px;}
+.upsell-box{max-width:900px;margin:0 auto;background:var(--bg-light);border:2px dashed #cbd5e1;border-radius:16px;padding:40px;}
+.upsell-title{text-align:center;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:30px;}
+.upsell-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.upsell-card{background:var(--white);padding:25px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.03);}
+.upsell-card h5{font-size:16px;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.upsell-card p{font-size:13px;color:var(--text-light);line-height:1.7;}
+
+.ba-section{background:var(--bg-cream);}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:900px;margin:0 auto;}
+.ba-card{background:var(--white);border-radius:12px;padding:35px 30px;box-shadow:0 4px 15px rgba(0,0,0,0.05);position:relative;}
+.ba-card.before{border-top:5px solid #94a3b8;}
+.ba-card.after{border-top:5px solid var(--gold);}
+.ba-label{font-weight:700;display:inline-block;padding:6px 16px;border-radius:6px;margin-bottom:20px;font-size:14px;}
+.ba-card.before .ba-label{background:#e2e8f0;color:#475569;}
+.ba-card.after .ba-label{background:var(--gold);color:var(--white);}
+.ba-text{font-size:15px;line-height:1.8;color:var(--text);font-weight:500;}
+.ba-speech{background:var(--bg-light);padding:20px;border-radius:8px;margin-top:20px;font-size:14px;line-height:1.8;color:var(--text-light);border-left:4px solid #cbd5e1;position:relative;}
+.ba-speech::before{content:'営業マン';position:absolute;top:-12px;left:10px;background:#cbd5e1;color:#fff;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:bold;}
+.ba-card.after .ba-speech{border-left-color:var(--gold);color:var(--navy);font-weight:700;background:var(--gold-pale);}
+.ba-card.after .ba-speech::before{background:var(--gold);}
+
+/* Simulator & CTA Form (元のCSSを流用) */
+.simulator{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:var(--white);}
+.simulator .section-title{color:var(--white)}
+.simulator-box{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:50px 40px;backdrop-filter:blur(10px);}
+.sim-row{margin-bottom:30px}
+.sim-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:15px;font-weight:500;}
+.sim-label .value{font-family:'Noto Serif JP',serif;font-size:24px;color:var(--gold-light);font-weight:700;}
+.sim-slider{-webkit-appearance:none;width:100%;height:8px;border-radius:4px;background:rgba(255,255,255,0.2);outline:none;cursor:pointer;}
+.sim-slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--gold);cursor:pointer;box-shadow:0 4px 12px rgba(208,169,0,0.5);}
+.sim-result{margin-top:40px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.2);display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.sim-result-box{background:rgba(208,169,0,0.15);border:1px solid var(--gold);border-radius:12px;padding:25px 20px;text-align:center;}
+.sim-result-label{font-size:14px;color:rgba(255,255,255,0.85);margin-bottom:10px;}
+.sim-result-value{font-family:'Noto Serif JP',serif;font-size:36px;color:var(--gold-light);font-weight:700;}
+.sim-result-value .yen{font-size:22px}
+
+.final-cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:var(--white);padding:90px 20px;text-align:center;}
+.final-cta h2{font-family:'Noto Serif JP',serif;font-size:38px;font-weight:700;margin-bottom:25px;line-height:1.5;}
+.final-cta p{font-size:17px;color:rgba(255,255,255,0.9);margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.9;}
+.contact-form{background:var(--white);border-radius:12px;padding:40px 50px;max-width:700px;margin:40px auto 0;text-align:left;box-shadow:0 10px 30px rgba(0,0,0,0.15);color:var(--text);}
+.form-group{margin-bottom:25px;}
+.form-label{display:flex;align-items:center;font-weight:700;color:var(--navy);margin-bottom:10px;font-size:15px;}
+.form-label .required{background:#e53e3e;color:var(--white);font-size:11px;padding:2px 8px;border-radius:4px;margin-left:10px;}
+.form-control{width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;transition:all 0.3s;background:#f9fafb;}
+.form-control:focus{outline:none;border-color:var(--gold);background:var(--white);box-shadow:0 0 0 3px rgba(208,169,0,0.2);}
+.form-submit-wrapper{text-align:center;margin-top:40px;}
+.form-submit-btn{background:var(--gold);color:var(--white);border:none;padding:18px 60px;border-radius:50px;font-size:18px;font-weight:700;cursor:pointer;transition:all 0.3s;box-shadow:0 8px 24px rgba(208,169,0,0.4);width:100%;max-width:300px;}
+.form-submit-btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 32px rgba(208,169,0,0.5);}
+.footer{background:var(--navy-dark);color:rgba(255,255,255,0.6);padding:40px 20px;text-align:center;font-size:13px;}
+
+@media (max-width:768px){
+  .hero{padding:100px 20px 60px}
+  .hero h1{font-size:28px;}
+  .reason-grid{grid-template-columns:1fr;gap:20px}
+  .pack-card{grid-template-columns:1fr;padding:35px 25px;gap:30px}
+  .pack-left{position:static}
+  .upsell-grid{grid-template-columns:1fr;}
+  .ba-grid{grid-template-columns:1fr;}
+  .sim-result{grid-template-columns:1fr;gap:18px}
+  .contact-form{padding:30px 20px;}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo"><span class="logo-mark">●</span> 共創パートナーみっけ</a>
+    <a href="#cta" class="header-cta">説明会に申し込む</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">CASIO楽一販売店パートナー向け 新たなドアノック提案</div>
+    <h1 class="serif">
+      「AIなんて…」を「AIすごい！」に変える<br>
+      <span class="accent">最初の3本。</span>
+    </h1>
+    <p class="hero-sub">
+      社長様が抱くAIへの不信感やハードルを極限まで下げる。<br>
+      タイピング不要で、日々の面倒な業務から解放され、<br>
+      一瞬で「自慢できる成果物」が出る、厳選のAIデビューパックです。
+    </p>
+    <div class="hero-trust">
+      <div class="hero-trust-item">音声や1行メモだけで入力完了</div>
+      <div class="hero-trust-item">数字の間違い(リスク)を気にしない領域</div>
+      <div class="hero-trust-item">サポートはすべて開発元にお任せ</div>
+    </div>
+    <div class="hero-cta-group">
+      <a href="#cta" class="btn-primary">販売店説明会に申し込む</a>
+      <a href="#packages" class="btn-primary" style="background:transparent; border:2px solid rgba(255,255,255,0.5);">デビューパックを見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="section concept">
+  <div class="section-inner">
+    <h2 class="section-title">なぜ、この「3本」から提案するのか？</h2>
+    <div class="section-line"></div>
+    <p class="section-sub">補助金や事業計画など、正確性がシビアなAI提案は後回し。<br>まずは社長が「安全に感動できる」アプリから入るのが鉄則です。</p>
+
+    <div class="reason-grid">
+      <div class="reason-card">
+        <div class="reason-icon">🎙️</div>
+        <h3>タイピングが不要</h3>
+        <p>スマホに向かって話すだけ、または1行のメモだけで完成します。ITに不慣れな社長にとって「入力が面倒」という最大の壁を取り払います。</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">🛡️</div>
+        <h3>リスクが極めて低い</h3>
+        <p>数字やファクトの正確性が問われる書類ではなく、「ストーリー」や「挨拶」など表現力が活きる領域です。「AIが嘘をついたら…」という不安を感じさせません。</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">😌</div>
+        <h3>日々の「重圧」を解放</h3>
+        <p>「SNS更新しなきゃ」「お礼状書かなきゃ」という、社長の頭の片隅にある面倒なタスクを代行。実用性が高く、日常的にAIを開く習慣が作れます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section packages" id="packages">
+  <div class="section-inner">
+    <h2 class="section-title">AIデビューパック<br>（ベスト盤・厳選3アプリ）</h2>
+    <div class="section-line"></div>
+    <p class="section-sub">「本当に使えるのか？」と半信半疑の社長様が、<br>初見のデモで最も驚き、その日から使い始めたくなる3本です。</p>
+
+    <div class="pack-card">
+      <div class="pack-left">
+        <div class="door-knock-badge">最初の提案（ドアノック）に最適！</div>
+        <div class="pack-icon-large">✨</div>
+        <div class="pack-title serif">AIデビュー<br>パック</div>
+        <p class="pack-tagline">「うちの会社もAIを導入したよ」<br>社長が自慢したくなる体験を。</p>
+
+        <div class="pack-target-box">
+          <strong>こんな会社・社長様へ</strong>
+          「AIには興味があるが、何から始めればいいか分からない」「自社に使いこなせるか不安」というすべての中小企業様へ。
+        </div>
+
+        <div class="pack-price-box">
+          <div class="pack-price-label">お客様向け月額</div>
+          <div class="pack-price-value"><span class="yen">¥</span>5,980<span class="month">/月</span></div>
+          <div class="pack-margin-tag">販売店マージン 30%</div>
+        </div>
+      </div>
+
+      <div class="pack-right">
+        <h4>収録アプリ（厳選3本）</h4>
+        <div class="app-list">
+          <!-- 1. 採用ストーリー -->
+          <div class="app-card">
+            <div class="app-emoji">🎤</div>
+            <div>
+              <div class="app-name">採用ストーリーみっけ</div>
+              <div class="app-desc">スマホに向かって思いを語るだけで、まるでプロのライターがインタビューしたような「社員紹介記事」が完成します。</div>
+              <div class="app-output"><strong>AIの魔法を体感：</strong><br>「タイピング不要で、こんなに綺麗な記事になるのか！」という感動を一撃で与えます。</div>
+            </div>
+          </div>
+          <!-- 2. SNS発信 -->
+          <div class="app-card">
+            <div class="app-emoji">📱</div>
+            <div>
+              <div class="app-name">SNS発信みっけ</div>
+              <div class="app-desc">今日の出来事を「1行メモ」するだけ。写真映えする文面やハッシュタグ付きの投稿文が自動生成されます。</div>
+              <div class="app-output"><strong>相棒としての実感：</strong><br>最も高い頻度で日常的に使うため、「AIが毎日助けてくれる」という実感が湧きやすいアプリです。</div>
+            </div>
+          </div>
+          <!-- 3. ご挨拶 -->
+          <div class="app-card">
+            <div class="app-emoji">💌</div>
+            <div>
+              <div class="app-name">ご挨拶みっけ</div>
+              <div class="app-desc">相手との関係性を少し入力するだけで、失礼のない、心のこもったお礼状や季節の挨拶文を作成します。</div>
+              <div class="app-output"><strong>心理的負担の軽減：</strong><br>社長の「書かなきゃ…でも面倒」という重圧を直接減らし、実用性の高さを評価されます。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 追加：アップセル（LTV）の視点 -->
+<section class="upsell-section">
+  <div class="upsell-box">
+    <h3 class="upsell-title">社長がAIに感動したら、次の提案へ。<br>（販売店の追加収益に）</h3>
+    <p style="text-align:center; font-size:15px; color:var(--text-light); margin-bottom:25px;">
+      デビューパックで「AIへの信頼」を獲得した後は、<br>より高度な専門パックを追加提案（アップセル）することが可能です。
+    </p>
+    <div class="upsell-grid">
+      <div class="upsell-card">
+        <h5>💼 取引先評価UPパック</h5>
+        <p>「月次レポート」「個別提案書」など、取引先との関係を強化するAIアプリ群。（＋5,980円/月）</p>
+      </div>
+      <div class="upsell-card">
+        <h5>🏦 地域・金融評価UPパック</h5>
+        <p>「補助金申請書」「事業計画書」など、ファクトベースの高度な書類作成AIアプリ群。（＋5,980円/月）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section ba-section">
+  <div class="section-inner">
+    <h2 class="section-title">営業マンの「訪問の質」が劇的に変わります</h2>
+    <div class="section-line"></div>
+    
+    <div class="ba-grid">
+      <div class="ba-card before">
+        <div class="ba-label">今まで（商材がない時）</div>
+        <p class="ba-text">システムの調子伺いしか話すことがなく、新しい提案に繋がらない。社長も忙しそうで長居できない。</p>
+        <div class="ba-speech">
+          「社長、最近システムの調子は…あ、問題ないですか。はい、ではまた来月伺います…」<br>
+          <span style="font-size:12px;color:#94a3b8;">（5分の雑談で終了）</span>
+        </div>
+      </div>
+      <div class="ba-card after">
+        <div class="ba-label">デビューパックを持参した時</div>
+        <p class="ba-text">「声を入れるだけで記事になる」というわかりやすいデモで、ITが苦手な社長も身を乗り出して聞いてくれる。</p>
+        <div class="ba-speech">
+          「社長！スマホに向かって1分喋るだけで、採用のインタビュー記事ができるAIをお持ちしたんですよ。ちょっと声出してみてください！」<br>
+          <span style="font-size:12px;color:var(--gold);">（社長が驚き、その場で使って感動する！）</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section simulator" id="simulator">
+  <div class="section-inner">
+    <h2 class="section-title">販売店の収益シミュレーター</h2>
+    <div class="section-line"></div>
+    <p class="section-sub" style="color:rgba(255,255,255,0.85)">
+      まずはデビューパックから入り、段階的に追加パックを受注した場合の<br>
+      毎月積み上がるストック収益をご確認ください
+    </p>
+
+    <div class="simulator-box">
+      <div class="sim-row">
+        <div class="sim-label">
+          <span>保有する楽一ユーザー数</span>
+          <span class="value"><span id="cust-val">300</span>社</span>
+        </div>
+        <input type="range" min="100" max="800" value="300" step="10" class="sim-slider" id="customers">
+      </div>
+
+      <div class="sim-row">
+        <div class="sim-label">
+          <span>導入率（まずはデビューパック）</span>
+          <span class="value"><span id="rate-val">30</span>%</span>
+        </div>
+        <input type="range" min="10" max="60" value="30" step="5" class="sim-slider" id="rate">
+      </div>
+
+      <div class="sim-row">
+        <div class="sim-label">
+          <span>1社平均契約パック数（将来的な追加含む）</span>
+          <span class="value"><span id="pack-val">1.5</span>パック</span>
+        </div>
+        <input type="range" min="10" max="30" value="15" step="1" class="sim-slider" id="packs">
+      </div>
+
+      <div class="sim-result">
+        <div class="sim-result-box">
+          <div class="sim-result-label">月額ストック収益</div>
+          <div class="sim-result-value"><span class="yen">¥</span><span id="monthly">242,190</span></div>
+        </div>
+        <div class="sim-result-box">
+          <div class="sim-result-label">年間ストック収益</div>
+          <div class="sim-result-value"><span class="yen">¥</span><span id="yearly">2,906,280</span></div>
+        </div>
+      </div>
+      <p class="sim-note" style="margin-top:20px; font-size:13px; color:rgba(255,255,255,0.7); text-align:center;">
+        ※ 月額¥5,980/パック × 販売店マージン30% × 平均契約パック数 で計算<br>
+        ※ お客様サポートは開発元が行うため、販売店様の運用コストはかかりません。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="cta">
+  <div class="section-inner">
+    <h2 class="serif">
+      「AIすごい！」の感動を、<br>
+      お客様に届けませんか。
+    </h2>
+    <p>
+      まずは販売店説明会(オンライン60分・無料)で、<br>
+      実際のアプリの動きと、貴社にとっての収益試算をご覧ください。
+    </p>
+
+    <div class="contact-form">
+      <form onsubmit="alert('※このデモでは送信されません。'); return false;">
+        <div class="form-group">
+          <label class="form-label">会社名 <span class="required">必須</span></label>
+          <input type="text" id="f-company" class="form-control" placeholder="例：株式会社〇〇販売" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">ご担当者名 <span class="required">必須</span></label>
+          <input type="text" id="f-name" class="form-control" placeholder="例：山田 太郎" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">メールアドレス <span class="required">必須</span></label>
+          <input type="email" id="f-email" class="form-control" placeholder="例：info@example.com" required>
+        </div>
+        <div class="form-submit-wrapper">
+          <button type="submit" class="form-submit-btn">説明会に申し込む</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-logo">● 共創パートナーみっけ</div>
+  <p>運営：Smile Plus Consulting / 松本 由也</p>
+  <p style="margin-top:20px;font-size:11px;opacity:0.6">© 2026 Smile Plus Consulting. All Rights Reserved.</p>
+</footer>
+
+<script>
+const custSlider = document.getElementById('customers');
+const rateSlider = document.getElementById('rate');
+const packSlider = document.getElementById('packs');
+const custVal = document.getElementById('cust-val');
+const rateVal = document.getElementById('rate-val');
+const packVal = document.getElementById('pack-val');
+const monthlyEl = document.getElementById('monthly');
+const yearlyEl = document.getElementById('yearly');
+
+function calc(){
+  const cust = parseInt(custSlider.value);
+  const rate = parseInt(rateSlider.value);
+  const packs = parseInt(packSlider.value) / 10;
+  const monthly = Math.round(cust * (rate/100) * 5980 * 0.3 * packs);
+  const yearly = monthly * 12;
+  custVal.textContent = cust;
+  rateVal.textContent = rate;
+  packVal.textContent = packs.toFixed(1);
+  monthlyEl.textContent = monthly.toLocaleString();
+  yearlyEl.textContent = yearly.toLocaleString();
+}
+
+custSlider.addEventListener('input', calc);
+rateSlider.addEventListener('input', calc);
+packSlider.addEventListener('input', calc);
+calc();
+</script>
+
+</body>
+</html>
