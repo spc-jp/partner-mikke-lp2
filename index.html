@@ -43,6 +43,9 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
 .header-cta{background:var(--gold);color:var(--white);padding:8px 18px;border-radius:25px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.3s;}
 .header-cta:hover{background:var(--gold-light)}
 
+/* PC用表示設定の下にスマホ改行用のユーティリティクラスを追加 */
+.sp-br { display: none; }
+
 .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:var(--white);padding:120px 20px 80px;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 30%,rgba(208,169,0,0.15) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(208,169,0,0.1) 0%,transparent 50%);}
 .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;text-align:center;}
@@ -150,15 +153,52 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
 .footer{background:var(--navy-dark);color:rgba(255,255,255,0.6);padding:40px 20px;text-align:center;font-size:13px;}
 
 @media (max-width:768px){
+  .sp-none { display: none; }
+  .sp-br { display: block; }
+  
   .hero{padding:100px 20px 60px}
-  .hero h1{font-size:28px;}
+  .hero h1{font-size:24px; line-height:1.6;}
+  .hero-sub{font-size:15px; line-height:1.8; text-align:left;}
+  .hero-trust{gap:15px; flex-direction:column; align-items:flex-start; display:inline-flex; text-align:left; margin:0 auto 40px;}
+  .hero-trust-item{font-size:15px;}
+  .hero-cta-group{flex-direction:column; width:100%;}
+  .btn-primary{padding:16px 30px; font-size:15px; width:100%; text-align:center;}
+  
+  .section{padding:60px 20px}
+  .section-title{font-size:24px; margin-bottom:15px;}
+  .section-sub{font-size:14px; text-align:left; margin-bottom:40px;}
+  
   .reason-grid{grid-template-columns:1fr;gap:20px}
   .pack-card{grid-template-columns:1fr;padding:35px 25px;gap:30px}
   .pack-left{position:static}
+  .pack-title{font-size:24px;}
+  .pack-price-value{font-size:26px;}
+  
+  .app-card{grid-template-columns:1fr; gap:10px; text-align:center;}
+  .app-emoji{font-size:40px;}
+  .app-desc, .app-output{text-align:left;}
+  
+  .upsell-section{padding:50px 20px;}
+  .upsell-box{padding:30px 20px;}
+  .upsell-title{font-size:18px;}
   .upsell-grid{grid-template-columns:1fr;}
+  
   .ba-grid{grid-template-columns:1fr;}
-  .sim-result{grid-template-columns:1fr;gap:18px}
-  .contact-form{padding:30px 20px;}
+  .ba-card{padding:25px 20px;}
+  .ba-speech{font-size:14px;}
+  
+  .sim-label{font-size:14px;}
+  .sim-label .value{font-size:20px;}
+  .sim-result{grid-template-columns:1fr;gap:15px; padding-top:30px; margin-top:30px;}
+  .sim-result-value{font-size:30px;}
+  
+  .final-cta{padding:60px 20px;}
+  .final-cta h2{font-size:24px;}
+  .final-cta p{font-size:15px; text-align:left;}
+  .contact-form{padding:30px 20px; margin-top:30px;}
+  .form-label{font-size:14px;}
+  .form-control{padding:12px;}
+  .form-submit-btn{padding:16px 30px; font-size:16px; max-width:100%;}
 }
 </style>
 </head>
@@ -179,8 +219,8 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
       <span class="accent">最初の3本。</span>
     </h1>
     <p class="hero-sub">
-      社長様が抱くAIへの不信感やハードルを極限まで下げる。<br>
-      タイピング不要で、日々の面倒な業務から解放され、<br>
+      社長様が抱くAIへの不信感やハードルを極限まで下げる。<br class="sp-none">
+      タイピング不要で、日々の面倒な業務から解放され、<br class="sp-none">
       一瞬で「自慢できる成果物」が出る、厳選のAIデビューパックです。
     </p>
     <div class="hero-trust">
@@ -199,7 +239,7 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
   <div class="section-inner">
     <h2 class="section-title">なぜ、この「3本」から提案するのか？</h2>
     <div class="section-line"></div>
-    <p class="section-sub">補助金や事業計画など、正確性がシビアなAI提案は後回し。<br>まずは社長が「安全に感動できる」アプリから入るのが鉄則です。</p>
+    <p class="section-sub">補助金や事業計画など、正確性がシビアなAI提案は後回し。<br class="sp-none">まずは社長が「安全に感動できる」アプリから入るのが鉄則です。</p>
 
     <div class="reason-grid">
       <div class="reason-card">
@@ -223,9 +263,9 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
 
 <section class="section packages" id="packages">
   <div class="section-inner">
-    <h2 class="section-title">AIデビューパック<br>（ベスト盤・厳選3アプリ）</h2>
+    <h2 class="section-title">AIデビューパック<br class="sp-none">（ベスト盤・厳選3アプリ）</h2>
     <div class="section-line"></div>
-    <p class="section-sub">「本当に使えるのか？」と半信半疑の社長様が、<br>初見のデモで最も驚き、その日から使い始めたくなる3本です。</p>
+    <p class="section-sub">「本当に使えるのか？」と半信半疑の社長様が、<br class="sp-none">初見のデモで最も驚き、その日から使い始めたくなる3本です。</p>
 
     <div class="pack-card">
       <div class="pack-left">
@@ -285,9 +325,9 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
 <!-- 追加：アップセル（LTV）の視点 -->
 <section class="upsell-section">
   <div class="upsell-box">
-    <h3 class="upsell-title">社長がAIに感動したら、次の提案へ。<br>（販売店の追加収益に）</h3>
-    <p style="text-align:center; font-size:15px; color:var(--text-light); margin-bottom:25px;">
-      デビューパックで「AIへの信頼」を獲得した後は、<br>より高度な専門パックを追加提案（アップセル）することが可能です。
+    <h3 class="upsell-title">社長がAIに感動したら、次の提案へ。<br class="sp-none">（販売店の追加収益に）</h3>
+    <p class="section-sub" style="margin-bottom:25px;">
+      デビューパックで「AIへの信頼」を獲得した後は、<br class="sp-none">より高度な専門パックを追加提案（アップセル）することが可能です。
     </p>
     <div class="upsell-grid">
       <div class="upsell-card">
@@ -312,16 +352,16 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
         <div class="ba-label">今まで（商材がない時）</div>
         <p class="ba-text">システムの調子伺いしか話すことがなく、新しい提案に繋がらない。社長も忙しそうで長居できない。</p>
         <div class="ba-speech">
-          「社長、最近システムの調子は…あ、問題ないですか。はい、ではまた来月伺います…」<br>
-          <span style="font-size:12px;color:#94a3b8;">（5分の雑談で終了）</span>
+          「社長、最近システムの調子は…あ、問題ないですか。はい、ではまた来月伺います…」
+          <div style="font-size:12px;color:#94a3b8;margin-top:5px;">（5分の雑談で終了）</div>
         </div>
       </div>
       <div class="ba-card after">
         <div class="ba-label">デビューパックを持参した時</div>
         <p class="ba-text">「声を入れるだけで記事になる」というわかりやすいデモで、ITが苦手な社長も身を乗り出して聞いてくれる。</p>
         <div class="ba-speech">
-          「社長！スマホに向かって1分喋るだけで、採用のインタビュー記事ができるAIをお持ちしたんですよ。ちょっと声出してみてください！」<br>
-          <span style="font-size:12px;color:var(--gold);">（社長が驚き、その場で使って感動する！）</span>
+          「社長！スマホに向かって1分喋るだけで、採用のインタビュー記事ができるAIをお持ちしたんですよ。ちょっと声出してみてください！」
+          <div style="font-size:12px;color:var(--gold);margin-top:5px;">（社長が驚き、その場で使って感動する！）</div>
         </div>
       </div>
     </div>
@@ -333,7 +373,7 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
     <h2 class="section-title">販売店の収益シミュレーター</h2>
     <div class="section-line"></div>
     <p class="section-sub" style="color:rgba(255,255,255,0.85)">
-      まずはデビューパックから入り、段階的に追加パックを受注した場合の<br>
+      まずはデビューパックから入り、段階的に追加パックを受注した場合の<br class="sp-none">
       毎月積み上がるストック収益をご確認ください
     </p>
 
@@ -343,36 +383,7 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
           <span>保有する楽一ユーザー数</span>
           <span class="value"><span id="cust-val">200</span>社</span>
         </div>
-        <input type="range" min="100" max="800" value="200" step="10" class="sim-slider" id="customers">
-      </div>
-
-      <div class="sim-row">
-        <div class="sim-label">
-          <span>導入率（まずはデビューパック）</span>
-          <span class="value"><span id="rate-val">30</span>%</span>
-        </div>
-        <input type="range" min="10" max="60" value="30" step="5" class="sim-slider" id="rate">
-      </div>
-
-      <div class="sim-row">
-        <div class="sim-label">
-          <span>1社平均契約パック数（将来的な追加含む）</span>
-          <span class="value"><span id="pack-val">1.0</span>パック</span>
-        </div>
-        <input type="range" min="10" max="30" value="10" step="1" class="sim-slider" id="packs">
-      </div>
-
-      <div class="sim-result">
-        <div class="sim-result-box">
-          <div class="sim-result-label">月額ストック収益</div>
-          <div class="sim-result-value"><span class="yen">¥</span><span id="monthly">242,190</span></div>
-        </div>
-        <div class="sim-result-box">
-          <div class="sim-result-label">年間ストック収益</div>
-          <div class="sim-result-value"><span class="yen">¥</span><span id="yearly">2,906,280</span></div>
-        </div>
-      </div>
-      <p class="sim-note" style="margin-top:20px; font-size:13px; color:rgba(255,255,255,0.7); text-align:center;">
+      <p class="sim-note" style="margin-top:20px; font-size:13px; color:rgba(255,255,255,0.7); text-align:left;">
         ※ 月額¥5,980/パック × 販売店マージン30% × 平均契約パック数 で計算<br>
         ※ お客様サポートは開発元が行うため、販売店様の運用コストはかかりません。
       </p>
@@ -387,7 +398,7 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--text);line-height:1.8;bac
       お客様に届けませんか。
     </h2>
     <p>
-      まずは販売店説明会(オンライン60分・無料)で、<br>
+      まずは販売店説明会(オンライン60分・無料)で、<br class="sp-none">
       実際のアプリの動きと、貴社にとっての収益試算をご覧ください。
     </p>
 
